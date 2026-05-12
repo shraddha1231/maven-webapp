@@ -7,9 +7,8 @@
 
     - name: Copy WAR file to Tomcat
       copy:
-       src: /var/snap/jenkins/5022/workspace/maven-webapp/target/maven-webapp.war
-        dest: "/opt/tomcat/webapps/maven-webapp.war"
-        remote_src: no
+        src: target/maven-webapp.war
+        dest: /opt/tomcat/webapps/maven-webapp.war
 
     - name: Restart Tomcat
       systemd:
